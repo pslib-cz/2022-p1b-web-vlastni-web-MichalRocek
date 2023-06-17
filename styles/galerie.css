@@ -1,0 +1,20 @@
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.polozka img {
+    border-radius: 10%;
+    display: inline-block;
+    object-fit: cover;
+    width: 220px;
+    height: 220px;
+    margin: 10px 10px 0px 10px;
+}
+
+.polozka img:hover {
+    width: 240px;
+    height: 240x;
+    margin: 0px;
+}

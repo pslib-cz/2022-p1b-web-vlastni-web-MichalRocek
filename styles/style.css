@@ -1,0 +1,198 @@
+/*Fonty*/
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+/*Definování proměnných*/
+:root {
+    --barva-tmava: #386641;
+    --barva-svetla: #6a994e;
+    --barva-menu: #a7c957;
+    --barva-pozadi: #f2e8cf;
+    --barva-odkaz: #ff4c43;
+    --barva-kvetinac: #bc4749;
+    --barva-seda: #eeeeee;
+    --mezera-elementu: 1em;
+    --mezera-20px: 20px;
+}  
+
+/*Responzivita webu*/
+@media only screen and (min-width: 480px){
+    .content-wrapper {
+        width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .flex {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        justify-content: center;
+    }
+
+    .flex > figure {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .flex {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .flex > figure {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+/*Styly záhlaví stránky*/
+.main-header {
+    background-image: url("../img/header.jpg");
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nazev-webu {
+    text-align: center;
+    color: var(--barva-kvetinac);
+    font-size: 12vw;
+    background-color: rgba(245, 245, 245, 0.5);
+    margin-bottom: 0px;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+
+/*Styly hlavní části stránky*/
+body {
+    font-family: 'Sofia Sans', sans-serif;
+    background-image: linear-gradient(white, var(--barva-pozadi));
+    background-attachment: fixed;
+    text-align: justify;
+    font-size: 1rem;
+    color: var(--barva-tmava);
+}
+
+p, h2, h3, figcaption {
+    margin: var(--mezera-elementu);
+}
+
+.content-wrapper {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nazev-stranky {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.flex > figure {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    margin-top: 0px;
+}
+
+p {
+    text-indent: 1cm;
+}
+
+/*Odkazy*/
+.odkaz {
+    color:var(--barva-odkaz);
+}
+
+.odkaz::after {
+    content: "➤";
+}
+
+.odkaz:hover {
+    color: var(--barva-kvetinac);
+}
+
+/*styly zápatí*/
+body > footer {
+    margin-top: var(--mezera-20px);
+    padding: var(--mezera-20px);
+    text-align: center;
+    background-color: var(--barva-seda);
+}
+
+/*Styly navigace a záložek*/
+.navigace {
+    position: sticky;
+    top: 0px;
+    width: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--barva-tmava);
+}
+
+.menu {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: var(--barva-menu);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.zalozka {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.zalozka a {
+    margin: 0px;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: var(--barva-tmava);
+    text-decoration: none;
+    font-size: 4cqh;
+}
+
+@media only screen and (max-width: 600px){
+    .zalozka a{
+        font-size: 3cqh;
+    }
+}
+
+.zalozka a:hover {
+    background-color: var(--barva-svetla);
+}
+
+.zalozka--stav-aktivni a {
+    background-color: var(--barva-tmava);
+    color: var(--barva-pozadi);
+}
+
+.zalozka--stav-aktivni a:hover {
+    background-color: var(--barva-tmava);
+    color: var(--barva-pozadi);
+}
+
+/*Ukončení floatu*/
+#clearFloat {
+    clear: both;
+}
